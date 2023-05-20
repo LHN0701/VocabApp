@@ -51,7 +51,7 @@ export default function CreateSet() {
     const HandleFail1 = () => toast.error("Create Set fail!",{
         position: toast.POSITION.TOP_CENTER});
     const HandleCreate = () => {
-        fetch(`https://localhost:7071/api/Courses/CreateCourseWord?name=${title}&description=${description}&userID=${localStorage.getItem("ID")}`,
+        fetch(`https://www.vocab-api-demo.somee.com/api/Courses/CreateCourseWord?name=${title}&description=${description}&userID=${localStorage.getItem("ID")}`,
         {
             method: 'POST',
             headers: {

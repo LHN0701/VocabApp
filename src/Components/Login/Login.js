@@ -14,7 +14,7 @@ export default function Login(props) {
     const HandleFail1 = () => toast.error("Login fail!",{
       position: toast.POSITION.TOP_CENTER});
     const HandleLogin = () => {
-        fetch(`https://localhost:7071/api/Users/Login?userName=${account}&password=${password}`, 
+        fetch(`https://www.vocab-api-demo.somee.com/api/Users/Login?userName=${account}&password=${password}`, 
         {
             method: 'POST',
             headers: {

@@ -43,7 +43,7 @@ export default function Register() {
       const HandleFail = () => toast.error("Register fail!",{
         position: toast.POSITION.TOP_CENTER});
       const HandleRegister = () => {
-        fetch(`https://localhost:7071/api/Users/Register?userName=${account}&password=${password}&name=${name}`, 
+        fetch(`https://www.vocab-api-demo.somee.com/api/Users/Register?userName=${account}&password=${password}&name=${name}`, 
         {
             method: 'POST',
             headers: {

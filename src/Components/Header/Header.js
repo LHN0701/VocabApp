@@ -39,7 +39,7 @@ export default function Header() {
     SetCssLibrarySet("Blue")
     SetCssLibraryFolder("Black")
 
-    fetch(`https://localhost:7071/api/Courses/GetAll/${localStorage.getItem("ID")}`)
+    fetch(`https://www.vocab-api-demo.somee.com/api/Courses/GetAll/${localStorage.getItem("ID")}`)
     .then (res => res.json())
     .then (data => {
       SetDataCourse(data)
@@ -51,7 +51,7 @@ export default function Header() {
     SetCssLibraryFolder("Blue")
     SetCssLibrarySet("Black")
 
-    fetch(`https://localhost:7071/api/Folder/GetFolderByUserID?userID=${localStorage.getItem("ID")}`)
+    fetch(`https://www.vocab-api-demo.somee.com/api/Folder/GetFolderByUserID?userID=${localStorage.getItem("ID")}`)
     .then (res => res.json())
     .then (data => {
       SetdataFolder(data)
@@ -116,7 +116,7 @@ export default function Header() {
   const HandleFail1 = () => toast.error("Create folder fail!",{
     position: toast.POSITION.TOP_CENTER});
   const HandleCreateFolder = () => {
-    fetch(`https://localhost:7071/api/Folder/CreateFolder?name=${folderTitle}&description=${folderDescription}&userID=${localStorage.getItem("ID")}`, 
+    fetch(`https://www.vocab-api-demo.somee.com/api/Folder/CreateFolder?name=${folderTitle}&description=${folderDescription}&userID=${localStorage.getItem("ID")}`, 
         {
             method: 'POST',
             headers: {

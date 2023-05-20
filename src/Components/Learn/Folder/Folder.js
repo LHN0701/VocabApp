@@ -10,7 +10,7 @@ export default function Folder() {
     const [filterText, SetFilterText] = useState("")
 
     useEffect(() => {
-        fetch(`https://localhost:7071/api/Folder/getfolderbyuserid?userid=${localStorage.getItem("ID")}`)
+        fetch(`https://www.vocab-api-demo.somee.com/api/Folder/getfolderbyuserid?userid=${localStorage.getItem("ID")}`)
             .then(res => res.json())
             .then(data => {
                 setData(data)

@@ -9,7 +9,7 @@ export default function HomeLogined() {
     const [data, SetData] = useState([])
 
     useEffect(() => {
-        fetch(`https://localhost:7071/api/Courses/GetSixNewest?userID=${localStorage.getItem("ID")}`)
+        fetch(`https://www.vocab-api-demo.somee.com/api/Courses/GetSixNewest?userID=${localStorage.getItem("ID")}`)
             .then(res => res.json())
             .then(data => {
                 SetData(data)

@@ -19,7 +19,7 @@ export default function Edit() {
     const [description, setDescription] = useState("")
 
     useEffect(() => {
-        fetch(`https://localhost:7071/api/Words/GetWordsByCourseID/${id}`)
+        fetch(`https://www.vocab-api-demo.somee.com/api/Words/GetWordsByCourseID/${id}`)
                 .then(res => res.json())
                 .then(data => {
                     setA(data.words)
@@ -60,7 +60,7 @@ export default function Edit() {
     const HandleFail1 = () => toast.error("Edit Set fail!",{
         position: toast.POSITION.TOP_CENTER});
     const HandleEdit = () => {
-        fetch(`https://localhost:7071/api/Courses/EditCourseWord?courseID=${id}&name=${title}&description=${description}&userID=${localStorage.getItem("ID")}`,
+        fetch(`https://www.vocab-api-demo.somee.com/api/Courses/EditCourseWord?courseID=${id}&name=${title}&description=${description}&userID=${localStorage.getItem("ID")}`,
         {
             method: 'PUT',
             headers: {

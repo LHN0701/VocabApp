@@ -14,7 +14,7 @@ export default function FolderDetail() {
     const [filterData, SetfilterData] = useState("")
 
     useEffect(() => {
-        fetch(`https://localhost:7071/api/Courses/GetByFolderID/${folderID}`)
+        fetch(`https://www.vocab-api-demo.somee.com/api/Courses/GetByFolderID/${folderID}`)
             .then(res => res.json())
             .then(data => {
                         setData(data)

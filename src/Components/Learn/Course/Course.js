@@ -10,7 +10,7 @@ export default function Course() {
     const [filterData, SetfilterData] = useState("")
 
     useEffect(() => {
-        fetch(`https://localhost:7071/api/Courses/GetAll/${localStorage.getItem("ID")}`)
+        fetch(`https://www.vocab-api-demo.somee.com/api/Courses/GetAll/${localStorage.getItem("ID")}`)
             .then(res => res.json())
             .then(data => {
                         setData(data)

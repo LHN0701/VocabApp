@@ -26,7 +26,7 @@ export default function FlashCard() {
     
 
     useEffect(() => {
-        fetch(`https://localhost:7071/api/Words/GetWordsByCourseID/${id}`)
+        fetch(`https://www.vocab-api-demo.somee.com/api/Words/GetWordsByCourseID/${id}`)
                 .then(res => res.json())
                 .then(data => {
                     setData(data.words)
@@ -100,7 +100,7 @@ export default function FlashCard() {
     const HandleFolder = () => {
         ShowFolder()
 
-        fetch(`https://localhost:7071/api/Folder/GetFolderByUserIDAndSetID?userID=${localStorage.getItem("ID")}&setID=${id}`)
+        fetch(`https://www.vocab-api-demo.somee.com/api/Folder/GetFolderByUserIDAndSetID?userID=${localStorage.getItem("ID")}&setID=${id}`)
                 .then(res => res.json())
                 .then(data => {
                     setDataFolder(data)
@@ -110,7 +110,7 @@ export default function FlashCard() {
     }
 
     const HandleAddToFolder  = (folderID) => {
-        fetch(`https://localhost:7071/api/Courses/AddCourseToFolder?courseID=${id}&folderID=${folderID}`, 
+        fetch(`https://www.vocab-api-demo.somee.com/api/Courses/AddCourseToFolder?courseID=${id}&folderID=${folderID}`, 
         {
             method: 'PUT',
             headers: {
@@ -124,7 +124,7 @@ export default function FlashCard() {
     }
 
     const HandleRemoveToFolder  = (folderID) => {
-        fetch(`https://localhost:7071/api/Courses/RemoveCourseToFolder?courseID=${id}&folderID=${folderID}`, 
+        fetch(`https://www.vocab-api-demo.somee.com/api/Courses/RemoveCourseToFolder?courseID=${id}&folderID=${folderID}`, 
         {
             method: 'PUT',
             headers: {
@@ -157,7 +157,7 @@ export default function FlashCard() {
     const HandleFail1 = () => toast.error("Share fail!",{
         position: toast.POSITION.TOP_CENTER});
     const HandleModalShare = () => {
-        fetch(`https://localhost:7071/api/Courses/ShareCourse?userNameShared=${accountShare}&setID=${id}`, 
+        fetch(`https://www.vocab-api-demo.somee.com/api/Courses/ShareCourse?userNameShared=${accountShare}&setID=${id}`, 
         {
             method: 'PUT',
             headers: {

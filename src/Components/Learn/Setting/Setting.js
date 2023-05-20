@@ -16,7 +16,7 @@ export default function Setting() {
         position: toast.POSITION.TOP_CENTER});
       const HandleChange = () => {
 
-        fetch(`https://localhost:7071/api/Users/ChangePassword?userName=${localStorage.getItem("Name")}&oldPassword=${oldpassword}&newPassword=${newpassword}`, 
+        fetch(`https://www.vocab-api-demo.somee.com/api/Users/ChangePassword?userName=${localStorage.getItem("Name")}&oldPassword=${oldpassword}&newPassword=${newpassword}`, 
         {
             method: 'PUT',
             headers: {
@@ -42,7 +42,7 @@ export default function Setting() {
     const HandleFail = () => toast.error("Change avatar fail!",{
       position: toast.POSITION.TOP_CENTER});
     const HandleChangePicture = (param) => {
-        fetch(`https://localhost:7071/api/Users/ChangeAvatar?userID=${localStorage.getItem("ID")}&linkAvatar=${param}`, 
+        fetch(`https://www.vocab-api-demo.somee.com/api/Users/ChangeAvatar?userID=${localStorage.getItem("ID")}&linkAvatar=${param}`, 
             {
                 method: 'PUT',
                 headers: {
